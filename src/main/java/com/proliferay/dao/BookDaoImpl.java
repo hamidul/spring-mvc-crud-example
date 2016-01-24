@@ -31,7 +31,6 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public void addBook(Book book) {
-		System.out.println("sessionFactory=========>"+sessionFactory);
 		sessionFactory.getCurrentSession().save(book);
 		
 	}

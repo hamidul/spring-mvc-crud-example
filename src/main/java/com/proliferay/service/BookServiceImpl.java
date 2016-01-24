@@ -30,7 +30,6 @@ public class BookServiceImpl implements BookService {
 	@Override
 	@Transactional
 	public void addBook(Book book) {
-		System.out.println("bookDao=========>"+bookDao);
 		bookDao.addBook(book);
 
 	}
