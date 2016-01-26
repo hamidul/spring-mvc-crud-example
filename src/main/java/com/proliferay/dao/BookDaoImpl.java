@@ -8,7 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import com.proliferay.model.Book;
 
-
+/**
+ * 
+ * @author Hamidul Islam
+ *
+ */
 @Repository
 
 public class BookDaoImpl implements BookDao{

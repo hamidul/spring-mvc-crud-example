@@ -3,7 +3,11 @@ package com.proliferay.service;
 import java.util.List;
 
 import com.proliferay.model.Book;
-
+/**
+ * 
+ * @author Hamidul Islam
+ *
+ */
 public interface BookService { 
 	Book findById(int bookId);
 

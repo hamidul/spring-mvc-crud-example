@@ -3,7 +3,11 @@ package com.proliferay.dao;
 import java.util.List;
 
 import com.proliferay.model.Book;
-
+/**
+ * 
+ * @author Hamidul Islam
+ *
+ */
 public interface BookDao {
 
 	Book findById(int bookId);

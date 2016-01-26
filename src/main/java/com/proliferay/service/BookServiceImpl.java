@@ -9,7 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.proliferay.dao.BookDao;
 import com.proliferay.model.Book;
-
+/**
+ * 
+ * @author Hamidul Islam
+ *
+ */
 @Service
 @Transactional
 public class BookServiceImpl implements BookService { 
