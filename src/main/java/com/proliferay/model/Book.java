@@ -1,4 +1,6 @@
 package com.proliferay.model;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name="Book")
 @Table(name="BOOK")
 
 public class Book {
@@ -25,6 +27,17 @@ public class Book {
 	private int bookPrice;
 	@Column(name = "ISBN")
 	private int isbn;
+	
+	@Column(name = "CREATE_DATE")
+	private Date createDate = new Date();
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
 	public int getId() {
 		return id;

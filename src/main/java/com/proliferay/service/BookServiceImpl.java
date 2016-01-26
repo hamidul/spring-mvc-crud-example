@@ -11,24 +11,26 @@ import com.proliferay.dao.BookDao;
 import com.proliferay.model.Book;
 
 @Service
+@Transactional
 public class BookServiceImpl implements BookService { 
 
 	@Autowired
 	private BookDao bookDao;
 
 	@Override
-	public Book findById(int bookId) {
+	public Book findById(int bookId) { 
 
 		return bookDao.findById(bookId);
 	}
 
 	@Override
+	
 	public List<Book> findAllBooks() {
 		return bookDao.findAllBooks();
 	}
 
 	@Override
-	@Transactional
+
 	public void addBook(Book book) {
 		bookDao.addBook(book);
 
@@ -38,6 +40,12 @@ public class BookServiceImpl implements BookService {
 	public void deleteBook(int bookId) {
 		bookDao.deleteBook(bookId);
 
+	}
+
+	@Override
+	public void updateBook(Book book) {
+		bookDao.updateBook(book);
+		
 	}
 
 }

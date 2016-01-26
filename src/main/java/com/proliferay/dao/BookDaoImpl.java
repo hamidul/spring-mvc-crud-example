@@ -18,15 +18,13 @@ public class BookDaoImpl implements BookDao{
 
 	@Override
 	public Book findById(int bookId) {
-		
-		Book book = (Book) sessionFactory.getCurrentSession().load(Book.class, bookId);
+		Book book = (Book) sessionFactory.getCurrentSession().get(Book.class, bookId);
 		return book;
 	}
 
 	@Override
 	public List<Book> findAllBooks() {
-		
-		 return sessionFactory.getCurrentSession().createQuery("from BOOK").list(); 
+		 return sessionFactory.getCurrentSession().createQuery("from Book b order by b.createDate desc").list(); 
 	}
 
 	@Override
@@ -41,6 +39,12 @@ public class BookDaoImpl implements BookDao{
         if (null != book) {
             sessionFactory.getCurrentSession().delete(book);
         }
+		
+	}
+
+	@Override
+	public void updateBook(Book book) {
+		sessionFactory.getCurrentSession().update(book);
 		
 	}
 
